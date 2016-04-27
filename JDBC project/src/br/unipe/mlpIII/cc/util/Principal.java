@@ -26,5 +26,7 @@ public class Principal {
 		Collections.sort(listaDeContas);
 		
 		System.out.println(listaDeContas);
+		
+		db.closeConnection();
 	}
 }

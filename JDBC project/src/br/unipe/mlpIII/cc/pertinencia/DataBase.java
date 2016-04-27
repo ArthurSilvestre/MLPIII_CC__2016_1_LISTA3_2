@@ -32,6 +32,18 @@ public class DataBase {
 		}
 	}
 	
+	public void closeConnection(){
+		try {
+			con.close();
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		this.st = null;
+		this.rs = null;
+		this.con = null;
+	}
+	
 	public ResultSet query(String query){
 		
 		try {
